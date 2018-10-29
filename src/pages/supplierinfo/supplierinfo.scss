@@ -1,0 +1,50 @@
+/*
+ * Copyright 2017 Alt-Solutions, LLC
+ * All rights reserved.
+ */
+.description {
+
+  ion-card {
+
+    margin-top: 200px;
+    overflow: visible;
+
+    ion-card-content {
+
+      background-color: map-get($colors, primary);
+      color: map-get($colors, light);
+      text-align: center;
+	  margin-top: 100px;
+      padding-bottom: 28px;
+
+      h1 {
+      color: map-get($colors, light);
+      }
+
+	  h2 {
+      color: map-get($colors, light);
+      }
+	  
+      h3 {
+      color: map-get($colors, light);
+      }
+    }
+	
+	div {
+	  border: solid 4px #808080;
+	  p {
+		padding-top: 4px;
+		padding-bottom: 4px;
+		padding-left: 4px;
+		padding-right: 4px;
+	  }
+	}
+  }
+}
+
+	.home-button {
+	  background-color: transparent;
+	  border: none;
+	  width: 150px;
+	  height: 150px;
+	}

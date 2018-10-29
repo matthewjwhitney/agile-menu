@@ -1,0 +1,34 @@
+<!-- Copyright 2017 Alt-Solutions, LLC. All rights reserved. -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>BACK</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="description">
+    <ion-card>
+        <ion-card-content>
+            <img src="data:image/jpeg;base64,{{(item | async)?.photo}}" />
+            <h1>{{(item | async)?.title}}</h1>
+            <h2>{{(item | async)?.note}}</h2>
+        </ion-card-content>
+		<div>
+		<p>{{(item | async)?.description1}}</p>
+		<p>{{(item | async)?.description2}}</p>
+		<p>{{(item | async)?.description3}}</p>
+		<p>{{(item | async)?.description4}}</p>
+		</div>
+	</ion-card>
+	<ion-note color=dark>TOUCH the Trail Crest Logo below to get back to the MAIN MENU.</ion-note>
+	
+  <div text-center>
+    <button ion-button round menuToggle class="home-button">
+      <img  width="105" height="112" src="assets/image/tclogo2.png"/>
+    </button>
+  </div>
+	
+</ion-content>
+
+ <ion-footer>
+  <ion-note>Copyright 2017 Trail Crest Brewing Company</ion-note>
+</ion-footer>

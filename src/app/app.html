@@ -1,0 +1,16 @@
+<!-- Copyright 2017 Alt-Solutions, LLC. All rights reserved. -->
+<ion-menu [content]="content">
+
+  <ion-content>
+  <img src="assets/image/tclogo.png" class="menu-logo"/>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)" class="menu-button" >
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,36 @@
+/*
+ * Copyright 2017 Alt-Solutions, LLC
+ * All rights reserved.
+ */
+ page-about {
+
+	.body-style {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: map-get($colors, light);
+	border: solid 4px #808080;
+	}
+
+	h1, h4 {
+	text-align: center;
+	}
+	
+	p {
+	font-size: 1.0em;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+	padding-right: 2px;
+	color: map-get($colors, dark);
+	}
+	
+	.home-button {
+	  background-color: transparent;
+	  border: none;
+	  width: 150px;
+	  height: 150px;
+	}
+
+}

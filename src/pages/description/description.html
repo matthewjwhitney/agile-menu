@@ -1,0 +1,51 @@
+<!-- Copyright 2017 Alt-Solutions, LLC. All rights reserved. -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>BACK</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="description">
+    <ion-card>
+        <ion-card-content>
+            <img src="data:image/jpeg;base64,{{item.photo}}" />
+            <h1>{{item.title}}</h1>
+            <h2>{{item.note}}</h2>
+			<h1>{{item.price}}</h1>
+        </ion-card-content>
+		<div>
+		<p>{{item.description1}}</p>
+		<p>{{item.description2}}</p>
+		<p>{{item.description3}}</p>
+		<p>{{item.description4}}</p>
+		</div>
+		<div>
+		<p>
+		<ion-note color=dark *ngIf="item.supplier">TOUCH Here for Info on Featured Producer:</ion-note>
+		</p>
+		<button ion-button full round *ngIf="item.supplier" icon-left (click)="supplierInfo(item.supplier)">
+			<ion-icon name="help"></ion-icon>
+			{{(supplierItem | async)?.title}}
+		</button>
+		<p>
+		<ion-note color=dark *ngIf="item.supplier">TOUCH Here to Add Item to Your Order:</ion-note>
+		</p>
+		<button ion-button full round icon-left *ngIf="item.price" (click)="orderItem(item)">
+			<ion-icon name="list-box"></ion-icon>
+			Add to My Order
+      </button>
+		</div>
+	</ion-card>
+	<ion-note color=dark>TOUCH the Trail Crest Logo below to get back to the MAIN MENU.</ion-note>
+	  	
+  <div text-center>
+    <button ion-button round menuToggle class="home-button">
+      <img  width="105" height="112" src="assets/image/tclogo2.png"/>
+    </button>
+  </div>
+	
+</ion-content>
+
+ <ion-footer>
+  <ion-note>Copyright 2017 Trail Crest Brewing Company</ion-note>
+</ion-footer>

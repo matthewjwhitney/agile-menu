@@ -1,0 +1,46 @@
+<!-- Copyright 2017 Alt-Solutions, LLC. All rights reserved. -->
+<ion-header>
+    <ion-navbar>
+		<button left class="button-custom" menuToggle>
+			<ion-icon name="menu"></ion-icon>
+			<ion-title>MENU</ion-title>
+		</button>
+		<ion-title>MY ORDER</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+		<ion-note color=dark>TOUCH an item to see a description. SWIPE LEFT on an item to delete it.</ion-note>
+        <ion-item-sliding *ngFor="let orderItem of orderItems">
+            <button ion-item (click)="itemTapped(orderItem)" class="order-button" >
+                <ion-avatar item-left>
+				<img width="120" height="160" src="data:image/jpeg;base64,{{orderItem.item.photo}}" />
+                </ion-avatar>
+                <h2>{{orderItem.item.title}}</h2>
+                <p>{{orderItem.item.note}}</p>
+				<ion-note color=dark item-right>{{orderItem.item.price}}</ion-note>
+            </button>
+            <ion-item-options>
+                <button danger (click)="deleteItem(orderItem)">Delete</button>
+            </ion-item-options>
+        </ion-item-sliding>
+		<ion-note color=dark>TOUCH the Trail Crest Logo below to get back to the MAIN MENU.</ion-note>
+    </ion-list>
+	
+	<button ion-button full round icon-left (click)="clearOrderItems()" item-left>
+		<ion-icon name="close-circle"></ion-icon>
+		Clear MY ORDER
+	</button>
+		
+	<div text-center>
+		<button ion-button round menuToggle class="home-button">
+			<img  width="105" height="112" src="assets/image/tclogo2.png"/>
+		</button>
+	</div>
+	  
+</ion-content>
+
+<ion-footer>
+  <ion-note>Copyright 2017 Trail Crest Brewing Company</ion-note>
+</ion-footer>

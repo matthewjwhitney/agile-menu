@@ -1,0 +1,22 @@
+/*
+ * Copyright 2017 Alt-Solutions, LLC
+ * All rights reserved.
+ */
+page-otherbeverages {
+
+	.otherbeverages-button {
+		background-color: map-get($colors, light) !important;
+		border: solid 2px #808080;
+		h2 {
+			padding-top: 2px;
+		}
+	}
+
+	.home-button {
+		background-color: transparent;
+		border: none;
+		width: 150px;
+		height: 150px;
+	}
+
+}
